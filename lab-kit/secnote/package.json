@@ -1,0 +1,13 @@
+{
+  "name": "secnote",
+  "version": "1.0.0",
+  "description": "SecNote - aplicativo de notas propositalmente vulneravel (SQL injection) para fins didaticos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "better-sqlite3": "^11.3.0"
+  }
+}

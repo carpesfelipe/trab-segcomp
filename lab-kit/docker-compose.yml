@@ -1,0 +1,42 @@
+# Kit de laboratorio - Trabalho Final (Seguranca em Computacao 2026/2)
+# Todos os servicos publicam portas APENAS em 127.0.0.1 (nunca na rede).
+#
+# Subir tudo (Juice Shop + SecNote + NetCheck):
+#   docker compose up -d --build
+# Derrubar e resetar:
+#   docker compose down
+
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: "no"
+
+  secnote:
+    build: ./secnote
+    ports:
+      - "127.0.0.1:4000:4000"
+    environment:
+      GROUP_ID: "${GROUP_ID:-0}"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: "no"
+
+  netcheck:
+    build: ./netcheck
+    ports:
+      - "127.0.0.1:4001:4001"
+    environment:
+      GROUP_ID: "${GROUP_ID:-0}"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_RAW        # necessario para o ping do aplicativo
+    pids_limit: 128
+    mem_limit: 256m
+    restart: "no"

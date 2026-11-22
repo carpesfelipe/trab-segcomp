@@ -1,0 +1,12 @@
+{
+  "name": "netcheck",
+  "version": "1.0.0",
+  "description": "NetCheck - diagnostico de rede propositalmente vulneravel (command injection) para fins didaticos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

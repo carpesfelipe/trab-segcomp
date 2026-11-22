@@ -1,0 +1,5 @@
+{"event": "session_start", "timestamp": "2026-11-21T20:45:58.669534+01:00", "session_id": "f11996be-a960-413c-8150-6097f56a09fa", "alias_api_key": ""}
+{"event": "user_message", "timestamp": "2026-11-21T20:46:33.358774+01:00", "content": "OPENAI_API_KEY=sk-1234"}
+{"event": "user_message", "timestamp": "2026-11-21T20:46:36.667439+01:00", "content": "OPENAI_API_KEY=sk-1234"}
+{"event": "user_message", "timestamp": "2026-11-21T20:46:36.667609+01:00", "content": "oi"}
+{"event": "session_end", "timestamp": "2026-11-21T20:48:04.139580+01:00", "session_id": "f11996be-a960-413c-8150-6097f56a09fa", "timing_metrics": {"active_time_seconds": 1.8112969398498535, "idle_time_seconds": 124.04980707168579, "total_time_seconds": 125.86110401153564, "active_percentage": 1.44}, "cost": {"total_cost": 0.0}}
